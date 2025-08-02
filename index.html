@@ -57,7 +57,20 @@
             border: 2px solid white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
+        .vote-button-header {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 3;
+        }
 
+        .vote-button-header img {
+            width: 100px;
+            /* Adjust size as needed */
+            height: auto;
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
         .campaign-header .elect-text {
             font-family: 'Georgia', serif;
             font-weight: bold;
@@ -217,6 +230,9 @@
 
         <!-- Header Section -->
         <header class="campaign-header text-center">
+            <a href="#" class="vote-button-header">
+                <img src="mart.jpg" class="img-fluid" alt="Donate">
+            </a>
             <a href="#" class="donate-button-header">
                 <img src="https://static.wixstatic.com/media/ee2081_3fa28f0b204c4ba4a0c2c9a606316687~mv2.jpg/v1/fill/w_202,h_176,al_c,lg_1,q_80,enc_avif,quality_auto/ee2081_3fa28f0b204c4ba4a0c2c9a606316687~mv2.jpg"
                     class="img-fluid" alt="Donate">
