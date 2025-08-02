@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin "Mouli" Padeti for Justice of the Peace, Precinct 2, Denton County</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georgia:wght@700&family=Spinnaker&family=Droid+Serif:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('https://static.wixstatic.com/media/b2c0a7_f09ff1059ee341799d1296d1556926dd.png/v1/fill/w_1920,h_1160,al_c,q_95,usm_0.66_1.00_0.01,enc_auto/b2c0a7_f09ff1059ee341799d1296d1556926dd.png');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.76);
+            border: 3px solid #000;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .6), inset 0 -1px 1px rgba(255, 255, 255, .75);
+        }
+
+        /* Header Styles based on Image */
+        .campaign-header {
+            background-color: #990e0e;
+            border: 3px solid #0b1621;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .donate-button-header {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 3;
+        }
+
+        .donate-button-header img {
+            width: 100px;
+            /* Adjust size as needed */
+            height: auto;
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .campaign-header .elect-text {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            color: #0d2542;
+            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: -15px;
+        }
+
+        .campaign-header .name-main {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: -1.5px -1.5px 0 #0d2542, 1.5px -1.5px 0 #0d2542, -1.5px 1.5px 0 #0d2542, 1.5px 1.5px 0 #0d2542;
+            font-size: clamp(4rem, 8vw, 6rem);
+            letter-spacing: 2px;
+            margin-bottom: -15px;
+        }
+
+        .campaign-header .name-last {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            color: #0d2542;
+            text-shadow: -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+            font-size: clamp(4rem, 10vw, 7.5rem);
+            position: relative;
+        }
+
+
+
+
+        .campaign-header .title-bar {
+            background-color: #281a39;
+            padding: 0.25rem 0;
+            margin-top: 5px;
+            border: 1px solid #000;
+        }
+
+        .campaign-header .title-text {
+            color: white;
+            font-family: 'Georgia', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+        }
+
+        .campaign-header .tagline-bar {
+            background-color: #000;
+            padding: 0.25rem 0;
+        }
+
+        .campaign-header .tagline-text {
+            color: white;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            letter-spacing: 0.1em;
+        }
+
+        /* Nav and other styles */
+        .navbar-custom {
+            background: #990e0e;
+            /* Fallback */
+            background: linear-gradient(to bottom, #990e0e, #870505);
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 0;
+        }
+
+        .navbar-custom .navbar-nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-custom .nav-item {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .navbar-custom .nav-link {
+            color: #ffffff;
+            font-family: 'Georgia', serif;
+            padding: 8px 15px;
+            margin: 0;
+            border-right: 1px solid #000;
+            transition: all 0.4s ease;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .navbar-custom .nav-item:last-child .nav-link {
+            border-right: none;
+        }
+
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link.active {
+            background-color: #281a39;
+            color: #fff;
+        }
+
+        .navbar-toggler {
+            background-color: #ffffff;
+            margin: 5px;
+        }
+
+
+        .main-info-box {
+            background-color: #990e0e;
+            padding: 15px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            height: 100%;
+        }
+
+        .info-box h5 {
+            font-size: 1.5rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .info-box p,
+        .info-box ul {
+            font-family: 'Droid Serif', serif;
+        }
+
+        .info-box a {
+            color: inherit;
+        }
+
+        .custom-hr {
+            border-top: 3px solid #8b0000;
+        }
+
+        .list-unstyled h2 {
+            font-family: 'Georgia', serif !important;
+            color: #000;
+        }
+
+        .footer-bg {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Mjg3Q0ZFRjI1MUI3MTFFMTk2RDU4QUVGMUIyOEIyRDUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjg3Q0ZFRjM1MUI3MTFFMTk2RDU4QUVGMUIyOEIyRDUiPiA_eHBhY2tldCBlbmQ9InIiPz6NzDb+AAAAE0lEQVR42mP4//+/ExMDA8N/EMGASmATQ5MAQgwA1j5FVK1V8TQAAAAASUVORK5CYII=');
+            background-repeat: repeat-x;
+            background-color: #870505;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .7);
+            border-top: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .footer-text {
+            color: #ffffff;
+            font-family: 'Droid Serif', serif;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container my-5 main-container">
+
+        <!-- Header Section -->
+        <header class="campaign-header text-center">
+            <a href="#" class="donate-button-header">
+                <img src="https://static.wixstatic.com/media/ee2081_3fa28f0b204c4ba4a0c2c9a606316687~mv2.jpg/v1/fill/w_202,h_176,al_c,lg_1,q_80,enc_avif,quality_auto/ee2081_3fa28f0b204c4ba4a0c2c9a606316687~mv2.jpg"
+                    class="img-fluid" alt="Donate">
+            </a>
+            <div class="header-content">
+                <h2 class="elect-text">ELECT</h2>
+                <h1 class="name-main">MARTIN 'MOULI'</h1>
+                <h1 class="name-last">
+                    PADETI
+
+                </h1>
+                <div class="title-bar">
+                    <p class="title-text mb-0">Justice of the Peace ⚖ Precinct 2 ⚖ Denton County, TX</p>
+                </div>
+                <div class="tagline-bar">
+                    <p class="tagline-text mb-0">ETHICS - INTEGRITY - HONESTY - COMMITMENT - TRANSPARENCY - SERVICE</p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">MEET MARTIN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">COMMUNITY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">GET INVOLVED</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ENDORSEMENTS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">DONATE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container-fluid p-3">
+            <section class="row mb-4 align-items-center">
+                <div class="col-lg-7">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="15.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="mypic1.jpg" class="d-block w-100" alt="Martin Padeti at a community event"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="WhatsApp Image 2025-07-31 at 15.34.14_1e11e17e.jpg" class="d-block w-100"
+                                    alt="Martin Padeti at a community event"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="5.jpg" class="d-block w-100" alt="Martin Padeti speaking at an event"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="4.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="6.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="7.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="8.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="9.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="10.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="11.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="12.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="13.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="14.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="17.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="18.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="19.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                    style="object-fit: contain; height: 400px;" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <ul class="pt-3 justify-content-center align-items-center">
+
+                        <li>
+                            <h2 class="fs-5 fw-bold">Conservative Republican</h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Good Samaritan</h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Voice of Persecuted Church </h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Founder of the Texas Pastors & Leaders Group </h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Advocate of Peace among interfaith Organizations </h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">22 Years in IT & Business Leadership</h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Licensed Real Estate & Mortgage Officer</h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Active Social Service Leader</h2>
+                        </li>
+                        <li>
+                            <h2 class="fs-5 fw-bold">Dedicated Husband and Father of 3 Boys</h2>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="row mb-4">
+                <div class="col-md-4 mb-4">
+                    <div class="info-box">
+                        <h5 class="main-info-box text-center">PRECINCT 2 <BR>DENTON COUNTY, TX</h5>
+                        <img src="denton county.png" class="img-fluid" />
+                        <p class="fw-bold">I am ready to serve all communities in Precinct 2, including:</p>
+                        <ul>
+                            <li>The Colony</li>
+                            <li>West Frisco</li>
+                            <li>Part of Little Elm</li>
+                            <li>Prosper</li>
+                            <li>Hackberry</li>
+                            <li>Lakewood Village</li>
+                        </ul>
+                        <p>I am committed to being an accessible and engaged Justice of the Peace for every resident.
+                        </p>
+                        <!-- <hr class="custom-hr"> -->
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-box">
+                        <h5 class="main-info-box text-center">A MESSAGE <br> FROM MARTIN</h5>
+                        <p>“I care for the people, and I have a passion to serve. My involvement with our communities
+                            has helped me understand the problems people face and shaped me to become an effective civil
+                            servant."</p>
+                        <p>“When I am elected, I will uphold the Constitution and serve every citizen with dignity and
+                            honor.”</p>
+                        <hr class="custom-hr">
+                        <p class="fw-bold text-center">Family & Faith</p>
+                        <p>My wife, Sirisha, and I have been married for seventeen years, and we have three wonderful
+                            children. We are proud members of Prestonwood Baptist Church.</p>
+                        <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel2">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="16.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                        style="object-fit: contain; height: 400px;" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="20.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                        style="object-fit: contain; height: 400px;" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="21.jpg" class="d-block w-100" alt="Martin Padeti with supporters"
+                                        style="object-fit: contain; height: 400px;" />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-box">
+                        <h5 class="main-info-box text-center">EXPERIENCE AND <br> COMMITMENT</h5>
+                        <p>I bring 22 years of experience in IT leadership, hold a Master’s degree, and am a certified
+                            PMP
+                            professional. I am also a licensed Real Estate Agent and Mortgage Officer.</p>
+                        <p>Having lived in Texas for 14 years, I’ve dedicated over 30 years to public service. In 2022,
+                            I founded
+                            the Texas India Coalition to promote peace, equality, and justice for all.</p>
+                        <hr class="custom-hr">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="footer-bg text-center py-3">
+        <div class="container">
+            <p class="footer-text small">Pol. Adv. Paid for by the Martin Padeti Campaign Treasurer.</p>
+            <p class="footer-text small">Copyright © 2025 Martin Padeti for Justice of the Peace. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
